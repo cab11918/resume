@@ -1,0 +1,258 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+    
+\pagestyle{fancy}
+\fancyhf{}
+\linespread{1.2}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{余}{名皓}{ \urlstyle{same}\href{mailto:906924612@qq.com}{906924612@qq.com} | 1738 6042 684
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.25\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{教育经历} 
+\sectionsep
+
+\subsection{悉尼大学}
+\descript{硕士学位，主修软件工程}
+\location{2022.08-2023.02}
+\sectionsep
+
+\subsection{美国东北大学}
+\descript{本科学位，计算机科学}
+\descript{辅修平面设计}
+\location{2017.09-2021.05}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{链接}
+\sectionsep
+Blog://  \href{https://cab11918.github.io/hugo-pweb}{\bf 个人网站} \\
+% (总计 3 万访客，8 万阅读量) \\    
+Github:// \href{https://github.com/cab11918}{\bf cab11918} \\
+% (380+ 关注者) \\
+% LinkedIn://  \href{https://www.linkedin.com/in/gaocegege}{\bf gaocegege} \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{修读课程}
+% \subsection{Graduate}
+% Advanced Machine Learning \\
+% Open Source Software Engineering \\
+% Advanced Interactive Graphics \\
+% Compilers + Practicum \\
+% Cloud Computing \\
+% Evolutionary Computation \\
+% Defending Computer Networks \\
+% Machine Learning \\
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{技能}
+\sectionsep
+
+\location{Web相关}
+HTML \textbullet{}JS/TS \textbullet{} CSS \textbullet{} React \textbullet{} Redux \textbullet{}  \\
+网络知识 \\
+\sectionsep
+% \location{安卓开发}
+% Android APIs \textbullet{} Gradle \textbullet{} Firebase \\
+% \sectionsep
+\location{编程语言}
+JS \textbullet{} Python \textbullet{} Java \\
+\sectionsep
+\location{云计算}
+分布式原理 \textbullet{} AWS \\ 腾讯云 \textbullet{} 谷歌云 \textbullet  \\ Docker/Kubernetes
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.73\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{工作经历}
+\sectionsep
+\runsubsection{数坤科技}
+\descript{前端开发工程师}
+\location{2021.09 - 2022.07}
+\vspace{\topsep}
+\begin{tightemize}
+    \item 开发和维护数字健康影像辅助诊断平台。项目使用React函数/类组件、Redux、
+    Scss样式、浏览器缓存、及canvas实现业务功能（X光片显示/交互、AI图像标注/建议
+    指南），使用Fetch和axios与后端服务通信。
+    \item 开发入账管理平台，使用React、Reudx及UI组件库，并涉及列表操作、条件筛选、
+    导出/下载以及基于URL的平台跳转功能
+    \item 开发健康相关Web小程序，计算用户钙化积分并给予建议。项目使用移动端UI
+    组件库，表格校验、以及插图UI的Scss样式
+    
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{项目}
+\sectionsep
+\runsubsection{{\bf AI文字生成3D模型Web平台}}
+\descript{全栈开发}
+\location{2023.11}
+\begin{tightemize}
+    \item 基于React的AI应用平台,使用函数组件及其常用Hooks、Redux开发, 实现了用户文字生成3D模型并保存、3D视图、浏览第三方作品等功能
+    \item 谷歌云部署模型，使用Firebase数据库与Node.js，后端生成任务由Python, Flask Celery实现（任务队列、模型脚本的调用、进度查询）
+
+    \end{tightemize}
+
+\sectionsep
+
+\runsubsection{{\bf 安卓手机应用 · TravelBud}}
+\descript{手机应用开发}
+\location{2022.10}
+\begin{tightemize}
+    \item 基于Java开发的安卓App，使用Android组件、谷歌云以及Firebase数据库,实现
+    用户聊天，更新行程，查看地图/添加地点等功能
+    \end{tightemize}
+
+\sectionsep
+
+\runsubsection{{\bf 基于图像的年龄预测模型}}
+\descript{代码/模型评估}
+\location{2023.05}
+\begin{tightemize}
+    \item 通过Wiki Face 数据集回归训练 ResNet, AlexNet, VGG 卷积神经网络，微调参数并综合对比结果实现的基于图片的年龄推测
+    \end{tightemize}
+
+\sectionsep
+
+\runsubsection{{\href{https://github.com/cab11918/CS4500-SP21-Snarl}{\bf 地下城游戏 · Snarl}}}
+\descript{全栈开发}
+\location{2021.07}
+\begin{tightemize}
+    \item 基于Python的2D多人游戏，使用TCP协议及socket库实现客户端与服务器通信，
+    多线程分开处理服务器的通信和游戏界面，使用广度搜索实现NPC找到并击杀玩家。
+    \end{tightemize}
+
+\sectionsep
+
+\runsubsection{{\href{https://github.com/cab11918/wbdv-fa19-game-webapp}{\bf 在线游戏平台 · myGame}}}
+\descript{全栈开发}
+\location{2020.01}
+\begin{tightemize}
+    \item 基于React框架以及Material-UI库以及MongoDB数据库开发，从RAWG.io API获取游戏资源的在线游戏论坛
+    \item 用户可以搜索，收藏，观看游戏视频以及浏览信息，注册，评论，与其他用户互动
+    \end{tightemize}
+    
+\sectionsep
+
+\runsubsection{{\href{https://github.com/cab11918/music-webapp}{\bf React 音乐播放器}}}
+\descript{前端开发}
+\location{2020.04}
+\begin{tightemize}
+    \item 基于React框架开发，使用网易云音乐API获取音乐数据
+    \item 可实现播放，暂停，音量调节；可随机，顺序，循环播放，以及进行音乐搜索以及
+    添加至列表
+    \end{tightemize}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Publications} 
+% \renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
+% \bibliographystyle{abbrv}
+% \bibliography{publications}
+% \nocite{*}
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
